@@ -30,7 +30,8 @@ $(document).ready(function() {
       // show the user details #profile h2 - <user login> + ' is GitHub user #' + <user id>
       obj = $.parseJSON(xmlhttp.responseText);
       console.log(obj);
-      $('<img src= '+obj.avatar_url+'>').appendTo(".avatar");
+      //$('<img src= '+obj.avatar_url+'>').appendTo(".avatar");
+      $(".avatar").html('<img src= '+obj.avatar_url+'>');
       $(".information h2").html(obj.name);
       $(".information h3").html(obj.location);
       var json = xmlhttp.responseText;
